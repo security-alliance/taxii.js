@@ -1,4 +1,4 @@
-import { StixObject } from "@security-alliance/stix/src/2.1/types";
+import { StixObject } from "@security-alliance/stix/2.1";
 
 export type TaxiiClientOptions = {
   endpoint: string;

@@ -1,14 +1,24 @@
 {
   "name": "@security-alliance/taxii",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "TAXII client written in JavaScript",
-  "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
+  "exports": {
+    "./2.1": "./dist/2.1/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "./2.1": [
+        "dist/2.1/index.d.ts"
+      ]
+    }
+  },
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist/; tsc -p tsconfig.release.json",
+    "prepublishOnly": "pnpm run build",
     "prettier:check": "npx prettier -c \"**/*.{js,ts,md,json,yml,yaml}\"",
     "prettier:fix": "npx prettier -w \"**/*.{js,ts,md,json,yml,yaml}\""
   },
@@ -18,13 +28,17 @@
   ],
   "author": "Security Alliance",
   "license": "MIT",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@security-alliance/stix": "file:../stix.js/security-alliance-stix-0.1.0.tgz"
+  },
   "devDependencies": {
+    "@types/node": "^22.5.5",
     "mocha": "^10.7.3",
     "prettier": "^3.3.3",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2"
-  },
-  "dependencies": {
-    "@security-alliance/stix": "^0.0.1"
   }
 }

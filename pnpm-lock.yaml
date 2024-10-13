@@ -8,9 +8,12 @@ importers:
   .:
     dependencies:
       "@security-alliance/stix":
-        specifier: ^0.0.1
-        version: 0.0.1
+        specifier: file:../stix.js/security-alliance-stix-0.1.0.tgz
+        version: file:../stix.js/security-alliance-stix-0.1.0.tgz
     devDependencies:
+      "@types/node":
+        specifier: ^22.5.5
+        version: 22.5.5
       mocha:
         specifier: ^10.7.3
         version: 10.7.3
@@ -241,10 +244,18 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@security-alliance/stix@0.0.1":
+  "@security-alliance/stix@file:../stix.js/security-alliance-stix-0.1.0.tgz":
     resolution:
       {
-        integrity: sha512-1S+RZhYG+9Zn2FGTWyyTB2c/p+MNWNsC8p1oUOQwwTNYLCmyMMK8dx4H8fnw93/84QJdkt9wzF346OikJ+hxqA==,
+        integrity: sha512-4C81oMX0Gx46Gq1X4/cLaAM+9FVxQvlxUymEWpcVe4hMKKQ5Kn6K4UpQCUKzviOtCyV8i38R98kd7PtSv5u8Bg==,
+        tarball: file:../stix.js/security-alliance-stix-0.1.0.tgz,
+      }
+    version: 0.1.0
+
+  "@types/node@22.5.5":
+    resolution:
+      {
+        integrity: sha512-Xjs4y5UPO/CLdzpgR6GirZJx36yScjh73+2NlLlkFRSoQN8B0DpfXPdZGnvVmLRLOsqDpOfTNv7D9trgGhmOIA==,
       }
 
   ansi-colors@4.1.3:
@@ -739,6 +750,12 @@ packages:
     engines: { node: ">=14.17" }
     hasBin: true
 
+  undici-types@6.19.8:
+    resolution:
+      {
+        integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==,
+      }
+
   uuid@10.0.0:
     resolution:
       {
@@ -873,10 +890,14 @@ snapshots:
   "@esbuild/win32-x64@0.23.1":
     optional: true
 
-  "@security-alliance/stix@0.0.1":
+  "@security-alliance/stix@file:../stix.js/security-alliance-stix-0.1.0.tgz":
     dependencies:
       json-canonicalize: 1.0.6
       uuid: 10.0.0
+
+  "@types/node@22.5.5":
+    dependencies:
+      undici-types: 6.19.8
 
   ansi-colors@4.1.3: {}
 
@@ -1158,6 +1179,8 @@ snapshots:
       fsevents: 2.3.3
 
   typescript@5.6.2: {}
+
+  undici-types@6.19.8: {}
 
   uuid@10.0.0: {}
 

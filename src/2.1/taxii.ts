@@ -1,5 +1,5 @@
 import { TaxiiError } from "../types.js";
-import { StixObject } from "@security-alliance/stix/src/2.1/types.js";
+import { StixObject } from "@security-alliance/stix/2.1";
 import {
   TaxiiClientOptions,
   DiscoveryResource,
