@@ -17,7 +17,7 @@
     }
   },
   "scripts": {
-    "build": "rm -rf dist/; tsc -p tsconfig.release.json",
+    "build": "tsc -p tsconfig.release.json",
     "prepublishOnly": "pnpm run build",
     "prettier:check": "npx prettier -c \"**/*.{js,ts,md,json,yml,yaml}\"",
     "prettier:fix": "npx prettier -w \"**/*.{js,ts,md,json,yml,yaml}\""
